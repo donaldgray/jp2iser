@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 ENV KAKADU_APPS_LOCATION s3://dlcs-bootstrap-objects/kdu77-apps.tar.gz
 

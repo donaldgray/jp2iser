@@ -47,6 +47,16 @@ e.g.,
 $ python jp2iser.py /path/to/my_image.tiff 400 200 100
 ```
 
+#### Running Docker Image
+
+If running the image via Docker a volume mount for `/scratch` needs to be setup. 
+
+Environment variables can be used to control `KAKADU_APPS_LOCATION` and standard AWS credentials for downloading the Kakadu binaries (e.g. `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`).
+
+```bash
+docker run -it --rm -p 5080:80 -v /path/to/scratch:/scratch tizer:local
+```
+
 ### TODO
 
 * implement rasterise_pdf using GhostScript
